@@ -330,7 +330,7 @@ JSGantt.GanttChart=function(pDiv, pFormat)
 			{'format':'Format','hour':'Hour','day':'Day','week':'Week','month':'Month','quarter':'Quarter','hours':'Hours','days':'Days',
 			 'weeks':'Weeks','months':'Months','quarters':'Quarters','hr':'Hr','dy':'Day','wk':'Wk','mth':'Mth','qtr':'Qtr','hrs':'Hrs',
 			 'dys':'Days','wks':'Wks','mths':'Mths','qtrs':'Qtrs','resource':'Checks','duration':'Duration','comp':'% Comp.',
-			 'completion':'Completion','startdate':'Start Date','enddate':'End Date','moreinfo':'More Information','notes':'Notes',
+			 'completion':'Completion','startdate':'Start Date','enddate':'End Date','moreinfo':'List Content','notes':'Notes',
 			 'january':'January','february':'February','march':'March','april':'April','maylong':'May','june':'June','july':'July',
 			 'august':'August','september':'September','october':'October','november':'November','december':'December','jan':'Jan',
 			 'feb':'Feb','mar':'Mar','apr':'Apr','may':'May','jun':'Jun','jul':'Jul','aug':'Aug','sep':'Sep','oct':'Oct','nov':'Nov',
@@ -1321,6 +1321,7 @@ JSGantt.GanttChart=function(pDiv, pFormat)
 			var vTmpNode=this.newNode(vTmpDiv, 'span', null, 'gTaskLabel');
 			vTmpNode=this.newNode(vTmpNode, 'a', null, 'gTaskText', vLangs[vLang]['moreinfo']);
 			vTmpNode.setAttribute('href',pTask.getLink());
+			vTmpNode.setAttribute('target', '_blank');
 		}
 		if(vShowTaskInfoNotes==1){
 			vTmpDiv=this.newNode(vTaskInfo, 'div', null, 'gTILine gTIn');

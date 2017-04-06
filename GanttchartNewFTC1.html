@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WinPCS Gantt</title>
+<script type="text/javascript" src="jsgantt.js"></script>
+<link rel="stylesheet" type="text/css" href="jsgantt.css"/>
+<link type="text/css" href="css/example.css" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<a href="#" onclick="window.print();"><img width="30" height="30" src="images/print_icon.gif" border="0" align="40"></a>
+<a href="index.html"><img border="0" src="images/home.jpg" left="180" top="0" width="52" height="28"></a>
+
+<b>WinPCS for HESS Petronas North Malay Basin project - REPFTC1</b>Euro & AU format dd/mm/yyyy and Julian day is -> 2457851 converted back today's date -> 07/04/2017
+</head>
+<body>
+
+</div>
+<div style="position:relative; " class="gantt" id="GanttChartDIV" ></div>
+
+<script type="text/javascript">
+
+	var g = new JSGantt.GanttChart(document.getElementById('GanttChartDIV'), 'month' );
+	if( g.getDivId() != null ) {
+		g.setCaptionType('Complete');  // Set to Show Caption (None,Caption,Resource,Duration,Complete)
+		g.setQuarterColWidth(136);
+		g.setUseSort(0);
+		g. setShowTaskInfoLink(1);
+
+		g.setDateTaskDisplayFormat('day dd month yyyy'); // Shown in tool tip box
+		g.setDayMajorDateDisplayFormat('mon yyyy - Week ww') // Set format to display dates in the "Major" header of the "Day" view
+		g.setWeekMinorDateDisplayFormat('dd mon') // Set format to display dates in the "Minor" header of the "Week" view
+		g.setShowTaskInfoLink(1); //Show link in tool tip (0/1)
+		g.setShowEndWeekDate(0); // Show/Hide the date for the last day of the week in header for daily view (1/0)
+		g.setUseSingleCell(10000); // Set the threshold at which we will only use one cell per table row (0 disables).  Helps with rendering performance for large charts.
+		g.setFormatArr('Day', 'Week', 'Month', 'Quarter'); // Even with setUseSingleCell using Hour format on such a large chart can cause issues in some browsers
+
+		// Parameters                     (pID, pName,                  pStart,       pEnd,         pStyle,         pLink  pMile, pRes,  pComp, pGroup, pParent, pOpen, pDepend, pCaption, pNotes, pGantt)
+
+g.setDateInputFormat('dd/mm/yyyy');
+g.setDateTaskTableDisplayFormat('dd/mm/yyyy');
+g.AddTaskItem(new JSGantt.TaskItem(100,'NOT Assigned','','','gtaskpink','WMoreInfo.lcx?f=ShowInfo&grandrepref=REPFTC1&level=CERTSYS&rootthis=',0,'129',0,1,0,0,'','','System NOT Assigned',g)); 
+g.AddTaskItem(new JSGantt.TaskItem(1001,'NOT Assigned','07/04/2017','06/06/2017','gtaskred','WMoreInfo.lcx?f=ShowInfo&grandrepref=REPFTC1&level=CERTAC1&rootthis=',0,'129',0,0,100,0,0,0, 'Sub-System NOT Assigned Total Outstanding =129',g)); 
+g.AddTaskItem(new JSGantt.TaskItem(101,'NMB-1A NMB-1A','','','gtaskblue','WMoreInfo.lcx?f=ShowInfo&grandrepref=REPFTC1&level=CERTSYS&rootthis=NMB-1A',0,'12690',0,1,0,0,'','','System NMB-1A NMB-1A',g)); 
+g.AddTaskItem(new JSGantt.TaskItem(1011,'NMB-1A NMB-1A','27/05/2015','06/06/2017','gtaskyellow','WMoreInfo.lcx?f=ShowInfo&grandrepref=REPFTC1&level=CERTAC1&rootthis=NMB-1A',0,'12690',75,0,101,0,0,0, 'Sub-System NMB-1A NMB-1A Total Outstanding =3161',g)); 
+g.Draw();} else {alert('Error, unable to create Gantt Chart');}g.DrawDependencies();</script> 

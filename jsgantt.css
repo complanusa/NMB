@@ -1,5 +1,5 @@
 /* Sample CSS for jsGanttImproved v1.7.3 */
-div.gantt		{ font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif; color: ##404040; padding: 20px;}
+div.gantt		{ font-family:tahoma, arial, verdana, Sans-serif; font-size:10px; color: #656565; }
 
 .gantt table	{ border-collapse: collapse; }
 .gantt td { padding: 0px; }
@@ -9,15 +9,15 @@ div.gantt		{ font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial
 .gminorheading,
 .gminorheadingwkend,
 .gtaskcell,
-.gtaskcellwkend				{ height: 30px; font-size: 20px; border: #efefef 1px solid; text-align: center; cursor: default }
-.gtasklist					{ height: 30px; min-width: 5px; max-width: 5px; width: 5px; border: #efefef 1px solid; border-right: none; } /* all three width values set just to make sure - helps resizing code */
+.gtaskcellwkend				{ height: 19px; font-size: 12px; border: #efefef 1px solid; text-align: center; cursor: default }
+.gtasklist					{ height: 19px; min-width: 5px; max-width: 5px; width: 5px; border: #efefef 1px solid; border-right: none; } /* all three width values set just to make sure - helps resizing code */
 
 /* Additional values for some cell elements */
 .gtaskheading,
 .gmajorheading,
-.gminorheading				{ background-color: #ffffff; font-weight: bold; font-size: 13px; white-space: nowrap; }
+.gminorheading				{ background-color: #ffffff; font-weight: bold; font-size: 9px; white-space: nowrap; }
 .gtaskcellwkend,
-.gminorheadingwkend			{ background-color: #f7f7f7; font-weight: bold; font-size: 13px; white-space: nowrap; }
+.gminorheadingwkend			{ background-color: #f7f7f7; font-weight: bold; font-size: 9px; white-space: nowrap; }
 td.gtaskcell				{ text-align: left }
 td.gspanning				{ border-left: none; border-right: none; }
 .gtaskcelldiv				{ position: relative; }
@@ -37,12 +37,12 @@ td.gspanning				{ border-left: none; border-right: none; }
 .gduration,
 .gpccomplete,
 .gstartdate div, /* needed for IE8 */
-.gstartdate					{ text-align: center; min-width: 70px; max-width: 70px; width: 70px; font-size: 13px; }
+.gstartdate					{ text-align: center; min-width: 70px; max-width: 70px; width: 70px; font-size: 10px; }
 .genddate div, /* needed for IE8 */
-.genddate					{ text-align: center; min-width: 70px; max-width: 70px; width: 70px; font-size: 13px; }
+.genddate					{ text-align: center; min-width: 70px; max-width: 70px; width: 70px; font-size: 10px; }
 .gtaskheading				{ text-align: center; }
 .gtaskname div, /* needed for IE8 */
-.gtaskname					{ min-width: 170px; max-width: 570px; width: 250px;  border-left: none; }
+.gtaskname					{ min-width: 170px; max-width: 170px; width: 170px; font-size: 9px; border-left: none; }
 
 .gselector					{ text-align: left; white-space: nowrap; min-width: 170px; max-width: 170px; width: 170px; }
 
@@ -50,7 +50,7 @@ td.gspanning				{ border-left: none; border-right: none; }
 span.gformlabel:hover,
 span.gselected				{ background-color: #dbecff; border: #cccccc 1px solid;}
 
-span.gfoldercollapse		{ color:#000000; cursor:pointer; font-weight:bold; font: 300 13px/19px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif; text-transform: uppercase;}
+span.gfoldercollapse		{ color:#000000; cursor:pointer; font-weight:bold; font-size: 12px; font-family: Courier, "Courier New", monospace; }
 
 .gtasktableh,
 .gtasktable					{ border-right: #efefef 1px solid; }
@@ -67,7 +67,7 @@ span.gfoldercollapse		{ color:#000000; cursor:pointer; font-weight:bold; font: 3
 /* task bar caption text styles */
 .gmilecaption,
 .ggroupcaption,
-.gcaption					{ font-weight: normal; font-size: 13px; text-align: left; white-space: nowrap; top:1px; position: absolute; top:2px; }
+.gcaption					{ font-weight: normal; font-size: 9px; text-align: left; white-space: nowrap; top:1px; position: absolute; top:2px; }
 
 .ggroupcaption,
 .gcaption					{ right: -126px; }
@@ -90,36 +90,32 @@ span.gfoldercollapse		{ color:#000000; cursor:pointer; font-weight:bold; font: 3
 .gtaskgreen,
 .gtaskyellow,
 .gtaskpurple,
-.gtaskpink					{ height: 18px; filter: alpha(opacity=90); opacity:0.9; margin-top: 1px; }
+.gtaskpink					{ height: 13px; filter: alpha(opacity=90); opacity:0.9; margin-top: 1px; }
 
 /* Task bars - ggroupblack is set as the default class on the task if it is undefined */
-.ggroupblack { height: 12px; background: #7e7e7e; margin-top: 2px; }
-.ggroupblackendpointleft	{ overflow: hidden; width:0px; height:0px; top: 2px; border-top: 4px solid white; border-left: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 4px solid transparent; float: left; }
-.ggroupblackendpointright	{ overflow: hidden; width:0px; height:0px; top: 0px; border-top: 6px solid white; border-left: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 4px solid transparent; float: right; }
-.ggroupblackcomplete		{ float:left; overflow: hidden; height:4px; filter: alpha(opacity=80); opacity:0.8; background-color:#66ED4B; margin-top:4px; margin-bottom: 4px; }
+.ggroupblack { height: 7px; background: #000000; margin-top: 2px; }
+.ggroupblackendpointleft	{ overflow: hidden; width:0px; height:0px; top: 2px; border-top: 4px solid black; border-left: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 4px solid transparent; float: left; }
+.ggroupblackendpointright	{ overflow: hidden; width:0px; height:0px; top: 2px; border-top: 4px solid black; border-left: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 4px solid transparent; float: right; }
+.ggroupblackcomplete		{ float:left; overflow: hidden; height:3px; filter: alpha(opacity=80); opacity:0.8; background-color:#777777; margin-top:2px; margin-bottom: 2px; }
 .gtaskblue {
-	background-color: #5fa2dd;
-	//background: rgb(58,132,195); /* Old browsers */
-	//background: linear-gradient(to bottom,  rgba(58,132,195,1) 0%,rgba(65,154,214,1) 20%,rgba(75,184,240,1) 40%,rgba(58,139,194,1) 70%,rgba(38,85,139,1) 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bb8f0', endColorstr='#3a84c3',GradientType=0 ); /* IE6-9 */
+	background: rgb(58,132,195); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(58,132,195,1) 0%,rgba(65,154,214,1) 20%,rgba(75,184,240,1) 40%,rgba(58,139,194,1) 70%,rgba(38,85,139,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bb8f0', endColorstr='#3a84c3',GradientType=0 ); /* IE6-9 */
 }
 .gtaskred {
-	background-color: #e62e00;
-	//background: rgb(196,58,58); /* Old browsers */
-	//background: linear-gradient(to bottom,  rgba(196,58,58,1) 0%,rgba(211,65,65,1) 20%,rgba(239,76,76,1) 40%,rgba(196,58,58,1) 70%,rgba(135,37,37,1) 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4c4c', endColorstr='#c43a3a',GradientType=0 ); /* IE6-9 */
+	background: rgb(196,58,58); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(196,58,58,1) 0%,rgba(211,65,65,1) 20%,rgba(239,76,76,1) 40%,rgba(196,58,58,1) 70%,rgba(135,37,37,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4c4c', endColorstr='#c43a3a',GradientType=0 ); /* IE6-9 */
 }
 .gtaskgreen {
-	background-color: #80edc4;
-	//background: rgb(80,193,58); /* Old browsers */
-	//background: linear-gradient(to bottom,  rgba(80,193,58,1) 0%,rgba(88,209,64,1) 20%,rgba(102,237,75,1) 40%,rgba(80,193,58,1) 70%,rgba(53,132,37,1) 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ED4B', endColorstr='#50c13a',GradientType=0 ); /* IE6-9 */
+	background: rgb(80,193,58); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(80,193,58,1) 0%,rgba(88,209,64,1) 20%,rgba(102,237,75,1) 40%,rgba(80,193,58,1) 70%,rgba(53,132,37,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ED4B', endColorstr='#50c13a',GradientType=0 ); /* IE6-9 */
 }
 .gtaskyellow {
-	background-color: #ffff66;
-	//background: rgb(247,228,56); /* Old browsers */
-	//background: linear-gradient(to bottom,  rgba(247,228,56,1) 0%,rgba(239,239,55,1) 20%,rgba(255,255,58,1) 40%,rgba(242,236,55,1) 70%,rgba(241,218,54,1) 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff3a', endColorstr='#f7e438',GradientType=0 ); /* IE6-9 */
+	background: rgb(247,228,56); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(247,228,56,1) 0%,rgba(239,239,55,1) 20%,rgba(255,255,58,1) 40%,rgba(242,236,55,1) 70%,rgba(241,218,54,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff3a', endColorstr='#f7e438',GradientType=0 ); /* IE6-9 */
 }
 .gtaskpurple {
 	background: rgb(193,58,193); /* Old browsers */
@@ -127,22 +123,20 @@ span.gfoldercollapse		{ color:#000000; cursor:pointer; font-weight:bold; font: 3
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4cef', endColorstr='#892689',GradientType=0 ); /* IE6-9 */
 }
 .gtaskpink {
-	background-color: #FFB6C1;
-	//background: rgb(249,177,245); /* Old browsers */
-	//background: linear-gradient(to bottom,  rgba(249,177,245,1) 0%,rgba(247,192,243,1) 20%,rgba(247,202,244,1) 40%,rgba(249,192,246,1) 70%,rgba(252,174,247,1) 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7caf4', endColorstr='#fcaef7',GradientType=0 ); /* IE6-9 */
+	background: rgb(249,177,245); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(249,177,245,1) 0%,rgba(247,192,243,1) 20%,rgba(247,202,244,1) 40%,rgba(249,192,246,1) 70%,rgba(252,174,247,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7caf4', endColorstr='#fcaef7',GradientType=0 ); /* IE6-9 */
 }
 .gtaskbluecomplete,
 .gtaskredcomplete,
 .gtaskgreencomplete,
 .gtaskyellowcomplete,
 .gtaskpurplecomplete,
-.gtaskpinkcomplete			{ float:left; overflow: hidden; height:18px; filter: alpha(opacity=20); opacity:0.2; background-color: #000000; }
+.gtaskpinkcomplete			{ float:left; overflow: hidden; height:5px; filter: alpha(opacity=40); opacity:0.4; background-color: #000000; margin-top:4px; }
 
 /* Printer friendly styles - we could use these all the time but they are not as pretty! */
 /* note that "@media print" is not supported in IE6 or 7.  Fully patched IE8 should be OK */
 @media print {
-	@page {size: landscape}
 	.ggroupblack { height:0px; border-top: 7px solid; border-color: #000000; }
 	.gtaskblue { height:0px; border-top: 13px solid; border-color: rgb(58,132,195); }
 	.gtaskred { height:0px; border-top: 13px solid; border-color: rgb(196,58,58); }
@@ -172,7 +166,7 @@ span.gfoldercollapse		{ color:#000000; cursor:pointer; font-weight:bold; font: 3
 .gDepSSArw			{ overflow: hidden; width:0px; height:0px; border-bottom: 4px solid transparent; border-left: 4px solid #ff0000; border-top: 4px solid transparent; border-right: 4px solid transparent;}
 .gDepFFArw,
 .gDepSFArw			{ overflow: hidden; width:0px; height:0px; border-bottom: 4px solid transparent; border-left: 4px solid transparent; border-top: 4px solid transparent; border-right: 4px solid #ff0000;}
-.gCurDate			{ border-color: #E62E00; z-index: 2 !important; }
+.gCurDate			{ border-color: #0000ff; }
 
 
 div.gtaskbarcontainer		{ z-index: 1; position: absolute; top: 0px }
@@ -184,13 +178,13 @@ div.gtaskbarcontainer		{ z-index: 1; position: absolute; top: 0px }
 .gTaskLabel 		{font-size: 11px; font-weight: bold; color: #656565; margin-left: 4px;}
 .gTaskText	 		{position:absolute; left: 90px; padding-top: 1px; font-size: 10px; font-weight: normal; color: #656565;}
 .gTaskNotes 		{font-size: 11px; font-weight: normal; color: #323232; padding: 0 15px; display: block;}
-.gTIn	 			{padding-top: 20px;}
+.gTIn	 			{padding-top: 10px;}
 
-.gantt				{ min-width: 1364px;	/* 2x LC width */ }
-.gchartcontainer	{ padding-left: 632px;	/* LC width */ }
+.gantt				{ min-width: 1064px;	/* 2x LC width */ }
+.gchartcontainer	{ padding-left: 532px;	/* LC width */ }
 .gcontainercol		{ position: relative; float: left; } /* Add a max-height value here if wanted */
-.glistgrid			{ width: 612px; /* LC width */ margin-left: -100%; right: 612px; /* LC width */ padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; background-color: #ffffff; overflow: hidden; }
-.glistlbl			{ width: 612px; /* LC width */ margin-left: -100%; right: 612px; /* LC width */ padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; background-color: #ffffff; overflow: hidden; }
+.glistgrid			{ width: 532px; /* LC width */ margin-left: -100%; right: 532px; /* LC width */ padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; background-color: #ffffff; overflow: hidden; }
+.glistlbl			{ width: 532px; /* LC width */ margin-left: -100%; right: 532px; /* LC width */ padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; background-color: #ffffff; overflow: hidden; }
 .glabelfooter		{ clear: both; }
 .ggridfooter		{ clear: both; }
 
